@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<title></title>
+
+<style type="text/css">
+#output {
+  color: 
+} 
+
+.all {
+  margin-left: 40px; 
+}
+
+#color {
+  background-color: darkblue;
+  height: 60px;
+  width: 800px;
+  color: white;
+  text-align: center;
+  padding-top:.1px;
+}
+
+
+</style>
+
+<script   src="https://code.jquery.com/jquery-2.2.4.js"   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="   crossorigin="anonymous"></script>
+  <script type="text/javascript" language="javascript">
+        
+        function onButtonClick() {
+          
+          today_topic = document.forms.id_form1.id_textBox1.value;          
+          achievements = document.forms.id_form1.id_textBox2.value;
+          thoughts_today = document.forms.id_form1.id_textBox3.value;
+          to_do = document.forms.id_form1.id_textBox4.value;
+  
+          var now =new Date();   
+          var year = now.getFullYear(); // 年
+          var months = new Array(12);
+months[0] = "January";
+months[1] = "February";
+months[2] = "March";
+months[3] = "April";
+months[4] = "May";
+months[5] = "June";
+months[6] = "July";
+months[7] = "August";
+months[8] = "September";
+months[9] = "October";
+months[10] = "November";
+months[11] = "December";
+
+          var month = now.getMonth(); // 月
+          var day = now.getDate();
+    
+        $("#output").append( "&#60;div&nbsp;&#99;&#108;a&#115;&#115; &#61;&#34;&#105;nsi&#100;e_" + day + "&#34;&#62;" + "&lt;h1&gt;" + "Today's topics" + "&lt;/h1&gt;" +  "&lt;h3&gt;" + today_topic + "&lt;/h3&gt;");
+        $("#output6").append("<&#104;2&nbsp;&#105;&#100;&#32;=&#34;text_" + day + "&#34;&#62;" + "日報を読む" + "&lt;/h2&gt;" );
+        $("#output2").append("&lt;h1&gt;" + "Achievements of today" + "&lt;/h1&gt;" +  "&lt;h3&gt;" + achievements + "&lt;/h3&gt;" );
+        $("#output3").append("&lt;h1&gt;" + "Thoughts of today" + "&lt;/h1&gt;" +  "&lt;h3&gt;" + thoughts_today + "&lt;/h3&gt;" );
+        $("#output4").append("&lt;h1&gt;" + "TO DOs for the next day" + "&lt;/h1&gt;" +  "&#60;&#104;3&nbsp;&#105;d=&#34;to&#95;d&#111;&quot;&#34;&#62;" + to_do + "&lt;/h3&gt;" + "&#60;&#104;&#50;&#32;&#105;&#100;&#32;&#61;&#34;&#105;&#110;&#115;&#105;&#100;&#101;&#95;" + day + "&#95;&#104;&#105;&#100;e&#34;>" + "閉じる"　+ "&#60;&#47;&#104;&#50;&#62;" + "&#60;&#47;&#100;&#105;v&#62;" + "&#60;&#47;&#100;&#105;v&#62;"  );
+        $("#output5").append( "&#60;&#100;iv&nbsp;clas&#115;&#61;&#34;&#98;&#111;x&#34;&#62;" + "&#60;&#99;ent&#101;&#114;&#62;" + "&lt;h1&gt;" + "Date : " +  months[month] + " "　+ day +  " ,"  + " " +  year  + "&lt;/h1&gt;");
+
+        }
+
+  </script>
+
+</head>
+<header><nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="report_make.html">日報作成ページ <span class="sr-only">(current)</span></a></li>
+        <li><a href="dailyreport.html">日報ページ</a></li>
+        <li><a href="index.html">自己紹介ページ</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#"></a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"></a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">日報作成ページ</a></li>
+            <li><a href="#">日報ページ</a></li>
+            <li><a href="#">自己紹介ページ</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav></header>
+<body>
+<div class ="all">
+<header> 
+  <form name="form1" id="id_form1" action="">
+    <p>Today's Topics</p>
+    <fieldset>
+    <textarea name="textBox1" id="id_textBox1" type="text" value="" style="width:400px; height:30px;"  /></textarea>
+<p style="margin-bottom:0px">Achievements of the day</p><textarea name="textBox2" id="id_textBox2" type="text" style = "width :400px; height: 60px;" value="" /></textarea></p>
+    <p>Thoughts on Today</p>
+    <textarea name="textBox3" id="id_textBox3" type="text" value="" style = "width :400px; height: 60px;" /></textarea></p>
+<p>TO DOs for the next day<p>
+<textarea name="textBox4" id="id_textBox4" type="text" value="" style = "width :400px; height: 60px;" value="" /></textarea></p>
+</fieldset>
+
+    <input type="button" id ="send" value="作成" onclick="onButtonClick();" />
+  </form>
+  <hr/>
+
+<div id = "main">
+  <p id ="output5"></p>
+  <p id ="output6"></p>
+  <p id="output"></p>
+  <p id ="output2"></p>
+  <p id ="output3"></p>
+  <p id ="output4"></p>
+</div>
+
+</div>
+
+<div id = "color"><h2>クリックしながら上下左右360度回してみてください</h2></div>
+
+
+</body>
+</html>
